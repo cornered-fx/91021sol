@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
+<title>$9+10 = 21 on SOL</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-image: url('https://i.kym-cdn.com/entries/icons/original/000/016/998/You_stupid_vine_(what's_9_10)_0-2_screenshot.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh; /* Ensure full height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .calculator {
+        margin-top: 10px; /* Adjust margin for mobile */
+        margin-bottom: 10px; /* Adjust margin for mobile */
+        width: 90%; /* Adjust width for mobile */
+        max-width: 300px; /* Set maximum width */
+        border: 1px solid #ccc;
+        padding: 20px;
+        color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    input[type="button"] {
+        width: 45%;
+        padding: 10px;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    input[type="button"]:hover {
+        background-color: #0056b3;
+    }
+    .header, .footer {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        color: #fff;
+        font-size: 14px;
+        position: static; /* Ensure header and footer don't overlap */
+    }
+    .header a, .footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+</style>
+</head>
+<body>
+<div class="header">
+    <a href="https://t.me/+PmjvHHt7MSw3NGJh">Telegram</a>
+    <a href="https://dexscreener.com/solana/bgr3gqcspnaeu3dpuu7zsbmv2phnt7v1pgep5kmnhjcf">$9+10 on Dexscreener</a>
+    <a href="https://solscan.io/account/5rJpC72moEHo7AYnKN1aHPybrjnt6B3qxbKHug7EECWj">MW on Solscan</a>
+    <a href="https://x.com/9_10_21_sol">X(formerly Twitter)</a>
+</div>
+<div class="calculator">
+    <h2>Calculator</h2>
+    <input type="text" id="display" readonly>
+    <br>
+    <input type="button" value="1" onclick="addToDisplay('1')">
+    <input type="button" value="2" onclick="addToDisplay('2')">
+    <input type="button" value="3" onclick="addToDisplay('3')">
+    <input type="button" value="4" onclick="addToDisplay('4')">
+    <br>
+    <input type="button" value="5" onclick="addToDisplay('5')">
+    <input type="button" value="6" onclick="addToDisplay('6')">
+    <input type="button" value="7" onclick="addToDisplay('7')">
+    <input type="button" value="8" onclick="addToDisplay('8')">
+    <br>
+    <input type="button" value="9" onclick="addToDisplay('9')">
+    <input type="button" value="0" onclick="addToDisplay('0')">
+    <br>
+    <input type="button" value="+" onclick="addToDisplay('+')">
+    <input type="button" value="-" onclick="addToDisplay('-')">
+    <input type="button" value="*" onclick="addToDisplay('*')">
+    <input type="button" value="/" onclick="addToDisplay('/')">
+    <br>
+    <input type="button" value="=" onclick="calculate()">
+    <input type="button" value="C" onclick="clearDisplay()">
+</div>
+
+<audio id="myAudio" src="9-10.mp3"></audio>
+
+<script>
+    function addToDisplay(value) {
+        document.getElementById("display").value += value;
+    }
+
+    function clearDisplay() {
+        document.getElementById("display").value = "";
+    }
+
+    function calculate() {
+        var expression = document.getElementById("display").value;
+        if (expression === "9+10") {
+            document.getElementById("display").value = "21";
+            playSound();
+            flyImages();
+        } else {
+            try {
+                document.getElementById("display").value = eval(expression);
+            } catch (error) {
+                document.getElementById("display").value = "Error";
+            }
+        }
+    }
+
+    function playSound() {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+    }
+
+    function flyImages() {
+        var numImages = 10; // Number of images to fly
+        var img = document.createElement("img");
+        img.src = "https://i.imgur.com/LQeqnL9.png";
+        img.style.position = "absolute";
+        img.style.transition = "all 10s ease";
+
+        for (var i = 0; i < numImages; i++) {
+            var cloneImg = img.cloneNode(true);
+            cloneImg.style.top = Math.random() * 90 + "%";
+            cloneImg.style.left = Math.random() * 90 + "%";
+            document.body.appendChild(cloneImg);
+            setTimeout(function (element) {
+                element.style.top = Math.random() * 90 + "%";
+                element.style.left = Math.random() * 90 + "%";
+                element.style.opacity = "0";
+            }, 20, cloneImg);
+        }
+    }
+</script>
+
+<div class="footer">
+    <a href="https://dexscreener.com/solana/bgr3gqcspnaeu3dpuu7zsbmv2phnt7v1pgep5kmnhjcf">CA: ACSaczpXZkzB39FDEfnqt66X5L52yL7fwdvQUh5NQosM</a>
+    <br>
+    <a href="https://solscan.io/account/5rJpC72moEHo7AYnKN1aHPybrjnt6B3qxbKHug7EECWj">MW: 5rJpC72moEHo7AYnKN1a
