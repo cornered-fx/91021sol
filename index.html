@@ -8,7 +8,7 @@
     body {
         font-family: Arial, sans-serif;
         text-align: center;
-        background-image: url('https://i.kym-cdn.com/entries/icons/original/000/016/998/You_stupid_vine_(what's_9_10)_0-2_screenshot.jpg');
+        background-image: url('https://raw.githubusercontent.com/Minedmaster/91021sol/main/21.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -98,7 +98,7 @@
     <input type="button" value="C" onclick="clearDisplay()">
 </div>
 
-<audio id="myAudio" src="9-10.mp3"></audio>
+<audio id="myAudio" src="https://github.com/Minedmaster/91021sol/raw/main/9-10.mp3"></audio>
 
 <script>
     function addToDisplay(value) {
@@ -108,21 +108,20 @@
     function clearDisplay() {
         document.getElementById("display").value = "";
     }
-
-    function calculate() {
-        var expression = document.getElementById("display").value;
-        if (expression === "9+10") {
-            document.getElementById("display").value = "21";
-            playSound();
-            flyImages();
-        } else {
-            try {
-                document.getElementById("display").value = eval(expression);
-            } catch (error) {
-                document.getElementById("display").value = "Error";
-            }
+function calculate() {
+    var expression = document.getElementById("display").value;
+    if (expression === "9+10") {
+        document.getElementById("display").value = "21";
+        playSound();
+        flyImages();
+    } else {
+        try {
+            document.getElementById("display").value = eval(expression);
+        } catch (error) {
+            document.getElementById("display").value = "Error";
         }
     }
+}
 
     function playSound() {
         var audio = document.getElementById("myAudio");
